@@ -41,5 +41,3 @@ class Default < Thor
     end
   end
 end
-
-__END__
