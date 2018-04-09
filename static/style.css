@@ -1,0 +1,30 @@
+body {
+  font-family: 'Fira Mono', monospace;
+}
+
+.calendar-day {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.calendar-day p {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 5px; 
+}
+
+.calendar-day img {
+  width: 100%;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+h2.header {
+  margin-bottom: 40px;
+}
