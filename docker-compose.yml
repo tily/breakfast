@@ -6,3 +6,7 @@ services:
       - 1313:1313
     volumes:
       - .:/usr/share/blog
+  gen:
+    build: .
+    volumes:
+      - .:/usr/share/blog
