@@ -18,7 +18,55 @@ class Default < Thor
     generate_thumbnail_images
   end
 
+  desc "summarize", "summarize breakfasts by month"
+  def summarize
+    months = Dir["static/*.jpg"].select {|path|
+      File.basename(path, ".jpg").match(/^\d{4}-\d{2}-\d{2}$/)
+    }.map {|path|
+      File.basename(path)[0, 7]
+    }.uniq
+    months.each do |month|
+      puts "Processing month: #{month}"
+      paths = Dir["static/#{month}*.jpg"]
+      alpha = 1.0 / paths.size
+      paths.each_with_index do |path, i|
+        puts " - #{path}"
+        generate_transparent_image(path, "#{path}.transparent.png", alpha)
+        if i == 0
+          execute("cp '#{path}.transparent.png' #{month}_result.#{i}.png")
+        else
+          overray_images("#{path}.transparent.png", "#{month}_result.#{i-1}.png", "#{month}_result.#{i}.png")
+        end
+      end
+    end
+  end
+
   no_commands do
+    def generate_transparent_image(source, target, alpha)
+      execute("
+        convert \
+          '#{source}' \
+          -alpha set \
+          -background none \
+          -channel A \
+          -evaluate multiply #{alpha} \
+          +channel \
+          '#{target}'
+      ")
+    end
+
+    def overray_images(source1, source2, target)
+      execute("
+        convert \
+          '#{source1}' \
+          '#{source2}' \
+          -gravity center \
+          -compose over \
+          -composite \
+          '#{target}'
+      ")
+    end
+
     def generate_markdown_files
       Dir["static/*.jpg"].each do |path|
         next if path == "static/404.jpg"
@@ -38,6 +86,11 @@ class Default < Thor
         puts "Executing: #{command}"
         system command
       end
+    end
+
+    def execute(command)
+      puts "Executing: #{command}"
+      system command
     end
   end
 end
