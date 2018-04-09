@@ -1,0 +1,4 @@
+---
+baseURL: "http://breakfast.prgrphs.tokyo/"
+title: "breakfast.prgrphs.tokyo"
+staticDir: "static"
