@@ -1,0 +1,36 @@
+{{ define "content" }}
+  {{ range $Month := .Site.Data.Calendar.Months }}
+    <div class="container hoge">
+      <h2 class="text-center header">{{ dateFormat "2006 January" (print .Month "-01") }}</h2>
+      <table>
+        <tr>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+          <th>Sun</th>
+        </tr>
+      {{ range .Weeks }}
+        <tr>
+        {{ range . }}
+          <td class="calendar-day">
+            {{ if eq (dateFormat "2006-01" .Date) $Month.Month }}
+              <p>{{ dateFormat "2" .Date }}</p>
+              {{ if .Picture }}
+                <a href="/{{ .Date }}"><img src="/thumbs/{{ .Date }}.jpg" /></a>
+              {{ else }}
+                <img src="/thumbs/404.jpg" />
+              {{ end }}
+            {{ else }}
+                <img src="/thumbs/404.jpg" />
+            {{ end }}
+          </td>
+        {{ end }}
+        </tr>
+      {{ end }}
+      </table>
+    </div>
+  {{ end }}
+{{ end }}
