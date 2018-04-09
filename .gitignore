@@ -1,0 +1,4 @@
+/public/
+/static/*.jpg
+/static/thumbs/*.jpg
+.DS_Store
