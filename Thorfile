@@ -2,7 +2,7 @@ require "time"
 require "erb"
 
 class Default < Thor
-  TEMPLATE = <<~EOF
+  DAY_TEMPLATE = <<~EOF
     +++
     date = "<%= date.iso8601 %>"
     title = "<%= date.strftime("%Y-%m-%d") %>"
@@ -10,10 +10,20 @@ class Default < Thor
     <img class="img-fluid" src="/<%= date.strftime("%Y-%m-%d") %>.jpg" />
   EOF
 
+  MONTH_TEMPLATE = <<~EOF
+    +++
+    date = "<%= date.iso8601 %>"
+    title = "<%= date.strftime("%Y-%m") %>"
+    type = "month"
+    +++
+  EOF
+
   desc "generate", "generate hugo files"
   def generate  
-    puts "Generating markdown files"
-    generate_markdown_files
+    puts "Generating month markdown files"
+    generate_month_markdown_files
+    puts "Generating day markdown files"
+    generate_day_markdown_files
     puts "Generating thumbnail_images"
     generate_thumbnail_images
   end
@@ -67,13 +77,27 @@ class Default < Thor
       ")
     end
 
-    def generate_markdown_files
+    def generate_day_markdown_files
       Dir["static/*.jpg"].each do |path|
         next if path == "static/404.jpg"
         basename = File.basename(path, ".jpg") 
         date = Time.parse(basename)
-        markdown = ERB.new(TEMPLATE).result(binding)
+        markdown = ERB.new(DAY_TEMPLATE).result(binding)
         markdown_path = "content/#{basename}.md"
+        puts "Writing markdown content to #{markdown_path}"
+        File.write(markdown_path, markdown)
+      end
+    end
+
+    def generate_month_markdown_files
+      months = Dir["static/*.jpg"]
+        .select {|x| File.basename(x).match(/^\d\d\d\d-\d\d-\d\d.jpg$/) }
+        .map {|x| File.basename(x)[0, 7] }
+        .uniq
+      months.each do |month|
+        date = Time.parse(month + "-01")
+        markdown = ERB.new(MONTH_TEMPLATE).result(binding)
+        markdown_path = "content/#{month}.md"
         puts "Writing markdown content to #{markdown_path}"
         File.write(markdown_path, markdown)
       end
