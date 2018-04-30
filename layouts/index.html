@@ -1,5 +1,11 @@
 {{ define "content" }}
   {{ range $Month := .Site.Data.Calendar.Months }}
-    {{ partial "calendar.html" $Month }}
+    <div class="container">
+      <h2 class="text-center header">
+        {{ dateFormat "2006-01" (print .Month "-01") }}
+        <a href="/{{ .Month }}/">&gt;</a>
+      </h2>
+      {{ partial "calendar.html" $Month }}
+    </div>
   {{ end }}
 {{ end }}
