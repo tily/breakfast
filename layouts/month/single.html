@@ -1,5 +1,7 @@
 {{ define "content" }}
   {{ range $Month := .Site.Data.Calendar.Months }}
-    {{ partial "calendar.html" $Month }}
+    {{ if eq $Month.Month $.Title }}
+      {{ partial "calendar.html" $Month }}
+    {{ end }}
   {{ end }}
 {{ end }}
