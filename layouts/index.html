@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="text-center header">
         {{ dateFormat "2006-01" (print .Month "-01") }}
-        <a href="/{{ .Month }}/">&gt;</a>
+        <a class="d-print-none" href="/{{ .Month }}/">&gt;</a>
       </h2>
       {{ partial "calendar.html" $Month }}
     </div>
