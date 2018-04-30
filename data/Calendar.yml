@@ -1,52 +1,79 @@
 Months:
-  #- Month: 2018-04
-  #  Weeks:
-  #    - 
-  #      - Date: 2018-03-31
-  #      - Date: 2018-04-01
-  #        Picture: true
-  #      - Date: 2018-04-02
-  #      - Date: 2018-04-03
-  #        Picture: true
-  #      - Date: 2018-04-04
-  #        Picture: true
-  #      - Date: 2018-04-05
-  #        Picture: true
-  #      - Date: 2018-04-06
-  #        Picture: true
-  #    - 
-  #      - Date: 2018-04-07
-  #        Picture: true
-  #      - Date: 2018-04-08
-  #      - Date: 2018-04-09
-  #      - Date: 2018-04-10
-  #      - Date: 2018-04-11
-  #      - Date: 2018-04-12
-  #      - Date: 2018-04-13
-  #    - 
-  #      - Date: 2018-04-14
-  #      - Date: 2018-04-15
-  #      - Date: 2018-04-16
-  #      - Date: 2018-04-17
-  #      - Date: 2018-04-18
-  #      - Date: 2018-04-19
-  #      - Date: 2018-04-20
-  #    - 
-  #      - Date: 2018-04-21
-  #      - Date: 2018-04-22
-  #      - Date: 2018-04-23
-  #      - Date: 2018-04-24
-  #      - Date: 2018-04-25
-  #      - Date: 2018-04-26
-  #      - Date: 2018-04-27
-  #    - 
-  #      - Date: 2018-04-28
-  #      - Date: 2018-04-29
-  #      - Date: 2018-04-30
-  #      - Date: 2018-05-01
-  #      - Date: 2018-05-02
-  #      - Date: 2018-05-03
-  #      - Date: 2018-05-04
+  - Month: 2018-04
+    Weeks:
+      -
+        - Date: 2018-03-31
+        - Date: 2018-04-01
+          Picture: true
+        - Date: 2018-04-02
+        - Date: 2018-04-03
+          Picture: true
+        - Date: 2018-04-04
+          Picture: true
+        - Date: 2018-04-05
+          Picture: true
+        - Date: 2018-04-06
+          Picture: true
+      -
+        - Date: 2018-04-07
+          Picture: true
+        - Date: 2018-04-08
+          Picture: true
+        - Date: 2018-04-04
+          Picture: true
+        - Date: 2018-04-09
+          Picture: true
+        - Date: 2018-04-10
+          Picture: true
+        - Date: 2018-04-11
+          Picture: true
+        - Date: 2018-04-12
+          Picture: true
+      -
+        - Date: 2018-04-13
+          Picture: true
+        - Date: 2018-04-14
+          Picture: true
+        - Date: 2018-04-15
+          Picture: true
+        - Date: 2018-04-16
+          Picture: true
+        - Date: 2018-04-17
+          Picture: true
+        - Date: 2018-04-18
+          Picture: true
+        - Date: 2018-04-19
+          Picture: true
+      -
+        - Date: 2018-04-20
+          Picture: true
+        - Date: 2018-04-21
+          Picture: true
+        - Date: 2018-04-22
+          Picture: true
+        - Date: 2018-04-23
+          Picture: true
+        - Date: 2018-04-24
+          Picture: true
+        - Date: 2018-04-25
+          Picture: true
+        - Date: 2018-04-26
+          Picture: true
+      -
+        - Date: 2018-04-27
+          Picture: true
+        - Date: 2018-04-28
+          Picture: true
+        - Date: 2018-04-29
+          Picture: true
+        - Date: 2018-04-30
+          Picture: true
+        - Date: 2018-05-01
+          Picture: true
+        - Date: 2018-05-02
+          Picture: true
+        - Date: 2018-05-03
+          Picture: true
   - Month: 2018-03
     Weeks:
       - 
