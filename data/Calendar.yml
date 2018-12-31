@@ -1,4 +1,122 @@
 Months:
+  - Month: 2018-12
+    Weeks:
+      -
+        - Date: 2018-11-26
+        - Date: 2018-11-27
+        - Date: 2018-11-28
+        - Date: 2018-11-29
+        - Date: 2018-11-30
+        - Date: 2018-12-01
+          Picture: true
+        - Date: 2018-12-02
+      -
+        - Date: 2018-12-03
+          Picture: true
+        - Date: 2018-12-04
+          Picture: true
+        - Date: 2018-12-05
+          Picture: true
+        - Date: 2018-12-06
+          Picture: true
+        - Date: 2018-12-07
+          Picture: true
+        - Date: 2018-12-08
+        - Date: 2018-12-09
+      -
+        - Date: 2018-12-10
+          Picture: true
+        - Date: 2018-12-11
+          Picture: true
+        - Date: 2018-12-12
+        - Date: 2018-12-13
+          Picture: true
+        - Date: 2018-12-14
+        - Date: 2018-12-15
+        - Date: 2018-12-16
+      -
+        - Date: 2018-12-17
+          Picture: true
+        - Date: 2018-12-18
+        - Date: 2018-12-19
+          Picture: true
+        - Date: 2018-12-20
+          Picture: true
+        - Date: 2018-12-21
+        - Date: 2018-12-22
+          Picture: true
+        - Date: 2018-12-23
+      -
+        - Date: 2018-12-24
+          Picture: true
+        - Date: 2018-12-25
+          Picture: true
+        - Date: 2018-12-26
+          Picture: true
+        - Date: 2018-12-27
+        - Date: 2018-12-28
+        - Date: 2018-12-29
+        - Date: 2018-12-30
+      -
+        - Date: 2018-12-31
+        - Date: 2019-01-01
+        - Date: 2018-01-02
+        - Date: 2018-01-03
+        - Date: 2018-01-04
+        - Date: 2018-01-05
+        - Date: 2018-01-06
+  - Month: 2018-11
+    Weeks:
+      -
+        - Date: 2018-10-29
+        - Date: 2018-10-30
+        - Date: 2018-10-31
+        - Date: 2018-11-01
+        - Date: 2018-11-02
+        - Date: 2018-11-03
+        - Date: 2018-11-04
+          Picture: true
+      -
+        - Date: 2018-11-05
+        - Date: 2018-11-06
+        - Date: 2018-11-07
+        - Date: 2018-11-08
+        - Date: 2018-11-09
+        - Date: 2018-11-10
+        - Date: 2018-11-11
+      -
+        - Date: 2018-11-12
+        - Date: 2018-11-13
+        - Date: 2018-11-14
+        - Date: 2018-11-15
+        - Date: 2018-11-16
+        - Date: 2018-11-17
+        - Date: 2018-11-18
+      -
+        - Date: 2018-11-19
+        - Date: 2018-11-20
+        - Date: 2018-11-21
+          Picture: true
+        - Date: 2018-11-22
+          Picture: true
+        - Date: 2018-11-23
+          Picture: true
+        - Date: 2018-11-24
+          Picture: true
+        - Date: 2018-11-25
+          Picture: true
+      -
+        - Date: 2018-11-26
+          Picture: true
+        - Date: 2018-11-27
+          Picture: true
+        - Date: 2018-11-28
+        - Date: 2018-11-29
+          Picture: true
+        - Date: 2018-11-30
+          Picture: true
+        - Date: 2018-12-01
+        - Date: 2018-12-02
   - Month: 2018-10
     Weeks:
       -
